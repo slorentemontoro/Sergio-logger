@@ -5,14 +5,15 @@ import com.kreitek.pets.controllers.ControllerFactory;
 import com.kreitek.pets.controllers.DogController;
 import java.util.Scanner;
 
+
 public class PetApp {
 
-    // TODO Logger declaration
 
     public static void main (String[] args) {
         ControllerFactory controllerFactory = new ControllerFactory();
         boolean end = false;
-        System.out.println("Pet app has been initiated"); // TODO Logger
+
+        logger.debug("Pet app has been initiated");
         while (!end) {
             String command = waitForNewCommand();
             String[] commandArgs = command.split(":");
@@ -58,7 +59,7 @@ public class PetApp {
                 System.out.println("Bad command error");
             }
         }
-        System.out.println("Pet app has been ended"); // TODO Logger
+        logger.debug("Pet app has been ended"); // TODO Logger
     }
 
     private static String getGetParam(String[] commandArgs) throws BadCommandException {

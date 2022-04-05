@@ -2,6 +2,7 @@ package com.kreitek.pets.infraestructure.bd;
 
 import com.kreitek.pets.domain.Cat;
 import com.kreitek.pets.domain.Dog;
+import com.kreitek.pets.logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,20 +33,20 @@ public class DbService {
 
     public void addNewDog(Dog dog) {
         dogs.add(dog);
-        // TODO logger.debug("BdService.Dog added");
+        logger.debug("BdService.Dog added");
     }
     public void addNewCat(Cat cat) {
         cats.add(cat);
-        // TODO logger.debug("BdService.Cat added");
+        logger.debug("BdService.Cat added");
     }
 
     public List<Cat> getCats() {
-        // TODO logger.debug("BdService.Get " + cats.size() + " cats);
+        logger.debug("BdService.Get " + cats.size() + " cats");
         return new ArrayList<>(cats);
     }
 
     public List<Dog> getDogs() {
-        // TODO logger.debug("BdService.Get " + cats.size() + " dogs);
+        logger.debug("BdService.Get " + cats.size() + " dogs");
         return new ArrayList<>(dogs);
     }
 }
