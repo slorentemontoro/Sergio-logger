@@ -1,15 +1,15 @@
 package com.kreitek.pets.controllers;
 
 import com.kreitek.pets.Controller;
-import com.kreitek.pets.domain.Cat;
 import com.kreitek.pets.domain.Dog;
 import com.kreitek.pets.infraestructure.bd.DbService;
-import com.kreitek.pets.logger;
+import com.kreitek.pets.Logger;
 
 import java.util.List;
 
 public class DogController implements Controller {
 
+    Logger logger = Logger.getInstance();
 
     public String executePut(String petName, String ownerName, String telephone) {
         logger.debug("DogController.executePut " + petName + "," + ownerName + "," + telephone);

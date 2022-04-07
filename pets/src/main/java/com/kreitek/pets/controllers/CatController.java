@@ -3,11 +3,13 @@ package com.kreitek.pets.controllers;
 import com.kreitek.pets.Controller;
 import com.kreitek.pets.domain.Cat;
 import com.kreitek.pets.infraestructure.bd.DbService;
-import com.kreitek.pets.logger;
+import com.kreitek.pets.Logger;
 
 import java.util.List;
 
 public class CatController implements Controller {
+
+    Logger logger = Logger.getInstance();
 
     @Override
     public String executePut(String petName, String ownerName, String telephone) {

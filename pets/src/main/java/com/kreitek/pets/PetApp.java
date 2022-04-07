@@ -12,6 +12,7 @@ public class PetApp {
     public static void main (String[] args) {
         ControllerFactory controllerFactory = new ControllerFactory();
         boolean end = false;
+        Logger logger = Logger.getInstance();
 
         logger.debug("Pet app has been initiated");
         while (!end) {
@@ -59,7 +60,7 @@ public class PetApp {
                 System.out.println("Bad command error");
             }
         }
-        logger.debug("Pet app has been ended"); // TODO Logger
+        logger.debug("Pet app has been ended");
     }
 
     private static String getGetParam(String[] commandArgs) throws BadCommandException {

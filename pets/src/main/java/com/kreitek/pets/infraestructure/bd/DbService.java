@@ -2,7 +2,7 @@ package com.kreitek.pets.infraestructure.bd;
 
 import com.kreitek.pets.domain.Cat;
 import com.kreitek.pets.domain.Dog;
-import com.kreitek.pets.logger;
+import com.kreitek.pets.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
 public class DbService {
     private static volatile DbService instance = null;
 
-    // TODO Logger declaration
+    Logger logger = Logger.getInstance();
     private List<Cat> cats = new ArrayList<>();
     private List<Dog> dogs = new ArrayList<>();
 
